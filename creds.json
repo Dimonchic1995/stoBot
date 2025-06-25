@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "graphite-proton-463021-u0",
+  "private_key_id": "c47370ce834840fa64b6454f3571eff69483200f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDQkEcWC7J9p/nj\n96hpb+n5bAHxXtrMIKtGh2a3s1+clYZXnE+w/o36ydDrhIQ87NHCCupjAz2nH6Zi\nnvLH3chqigstS38IQVPSxJ0AfFtum5BaBYB7Vw3vewnwJEJKmRTiEJ9swgMPoack\nzOanXB9n8RLOTJFw+M0rYkO1BDsd/zVqRScXc79bb5Y+crEjmBFIV5nqH6frQJ2Q\nW2LT64Tmq8Y3F3pp43gdewEp9DHAKXguHA5CtLAnKHtKwYaa+1cv8T6ZIEjS6eQe\nUD5MlCT4PEcMqcobWl46PzE68Zk+RP3GePhpKhEyqj6aH0WnkBh7o1rnXGDiGy0p\nq0c9mw8PAgMBAAECggEACTc0Kj62Z9lUxY8gvhadCDw5XRYmZS+qXHGeMc7MvOlZ\n0s7hhz4a6EfOTKHXNVlM2XNMW7dTHD/d78H7Pfvy9PYy5pD374BHeRWJTxyvmOm/\nIqMsmVvwOIfqGVYuJwgFmrRGVHLBhN7NORHkEpATroRB+E380o5D2T9nI31TiWXe\n0O8ZEvOum6Lou9XkJ6nGW/fruwNXBJp02QiMansnU5YZKeZnXQ8F0pow0VNA+bHO\nLD8BA8r1/gjvmM4VAKfvBZsU3TEjjry0GdLppvhlJFgCB/p6p5p8QL5/mCIocKzf\n0v5n4D4MOmVNn/ENsOXONsWDWyvkcrXyOj/4Lw1saQKBgQD8iZDPeTGYcRuRSVNi\nhL1tdFkOHQAVmhbQus+TtIaxU+b0VTRH7tlTSoSy5jKFRWGoZmBAm0RM9XC3G2T2\n/t3GxDCDAbjOg8CwknSz88OS6RYxJMaBk+qQCGo2BtOa81HcXR3WHR67nMy2vBrg\ngnvVa/ZZWXu/I+SxfThekMwMZwKBgQDTbFvwTOAqt83wPCDTVoCk0r8kxge2+tNN\nX3L1JeKkCRpMTkc3a3YYIJBemmKR47+0fRdZ1bSQqcKzsPlNMr6xL3e6ujhOuQtk\n+dCYZgqgZ0166EUeaZpmHAS35xEFZPxtduQJj4Rj0sHnLGKitP/UvguOb/XpXqTY\nReYajAu/GQKBgHN+Jm/8KSZidA0Zz7y6oDcygpflw2gdtFl5Vf1jDkaC7JjJbsOH\nBHUHG3EFvg0dEfCGAXcKi0324bmcGaysGpkQmG8Rloc70h/umtjBnqvNVYzcGLyh\n/SAp+QkETjoLFWEGZOLLJob+ytC3bkNG6YNNgLiUJ/feXnSdo+37opX5AoGAfCFs\nwWOBYdNU2C2VYD+zfBI4I5EZSndtxEm8Ju69aG3nwNFcws8XIQdNfB3Mrbc4APJI\n2Xe9cgoZxIKtfIPEricedsWK9b1zUS/TJwcSSiccuILSwg5ilnzw0ECcH7yw8FwT\newGGS02chuvqZXk7k16ZTmGx0fi9dDVl6kQ7SVECgYAUiXKlNIOS623r5R86pazf\nUcEQkbLzwHFdV3vf3LrX9F9FvOUgee3K3NobitqUTiWDJKm5UoBwHlzPsLFMeM1a\npmVwNypZHwkce5AdB2iFYJNmZJ9LIqP6hT3Qe/Vcc1oUFPy8i0ha3FM6eLb/C0hc\nbSer3xLEjQZy/ioZoffNqA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "autoservice-bot@graphite-proton-463021-u0.iam.gserviceaccount.com",
+  "client_id": "115760948919479027594",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/autoservice-bot%40graphite-proton-463021-u0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
