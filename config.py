@@ -1,7 +1,7 @@
 SERVICE_TYPES = {
     "Рихтовка/покраска": {
         "subtypes": ["Кузовна рихтовка", "Повна покраска", "Локальна покраска"],
-        "requires_datetime": True,
+        "requires_datetime": False,
         "calendar_id": "gdg1234576543@gmail.com",
         "chat_id": "-1002660061190"  # ID групи
     },
