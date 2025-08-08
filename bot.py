@@ -7,8 +7,6 @@ from google_calendar import add_to_calendar
 from aiogram.types import BotCommand
 import asyncio
 from reminder import run_daily_check
-import requests
-from dotenv import load_dotenv
 from config import SERVICE_TYPES, POPULAR_CARS
 
 def notify_manager(data, full_name, chat_id):
