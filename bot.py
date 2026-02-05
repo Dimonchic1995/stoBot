@@ -11,6 +11,7 @@ from google_calendar import add_to_calendar
 from aiogram.types import BotCommand
 import asyncio
 from reminder import run_daily_check
+from desktop_push import send_incoming_message
 from config import SERVICE_TYPES, POPULAR_CARS
 
 async def setup_bot_commands():
@@ -236,6 +237,15 @@ async def step_contact(m: types.Message):
         notify_manager(data, m.from_user.full_name, chat_id)
     except Exception as e:
         logging.error(f"❌ Notify error: {e}")
+
+    try:
+        summary = (
+            f"Нова заявка: {data.get('service_type')} - {data.get('subtype')} "
+            f"({data.get('datetime')})"
+        )
+        send_incoming_message(str(uid), m.from_user.full_name, summary, str(m.message_id))
+    except Exception as e:
+        logging.error(f"❌ Desktop push error: {e}")
 
     await m.answer("✅ Заявка прийнята!", reply_markup=types.ReplyKeyboardRemove())
     user_data.pop(uid, None)
