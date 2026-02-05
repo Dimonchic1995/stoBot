@@ -12,6 +12,7 @@ from aiogram.types import BotCommand
 import asyncio
 from reminder import run_daily_check
 from config import SERVICE_TYPES, POPULAR_CARS
+from desktop_push import push_incoming
 
 async def setup_bot_commands():
     commands = [
@@ -245,3 +246,14 @@ def schedule_jobs():
     scheduler.add_job(lambda: run_daily_check(0), "cron", hour=9, minute=0)
     scheduler.add_job(lambda: run_daily_check(1), "cron", hour=19, minute=0)
     scheduler.start()
+
+
+@dp.message_handler(content_types=types.ContentType.TEXT)
+async def push_text_to_desktop(m: types.Message):
+    push_incoming(
+        chat_id=str(m.chat.id),
+        user_name=m.from_user.full_name,
+        text=m.text or "",
+        ts=m.date.isoformat() if m.date else None,
+        message_id=str(m.message_id),
+    )
