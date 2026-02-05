@@ -12,6 +12,7 @@ from aiogram.types import BotCommand
 import asyncio
 from reminder import run_daily_check
 from config import SERVICE_TYPES, POPULAR_CARS
+from desktop_push import push_to_desktop
 
 async def setup_bot_commands():
     commands = [
@@ -60,6 +61,7 @@ async def cmd_start(msg: types.Message):
     kb.add(KeyboardButton("🚀 Почати"))
     await msg.answer("Привіт! Натисни «🚀 Почати» для старту запису на сервіс.", reply_markup=kb)
     user_data[uid] = {'step': None}
+    push_to_desktop(uid, msg.from_user.full_name, msg.text or "/start", message_id=msg.message_id)
 
 @dp.message_handler(lambda m: m.text == "🚀 Почати")
 async def handle_start_button(m: types.Message):
@@ -238,6 +240,7 @@ async def step_contact(m: types.Message):
         logging.error(f"❌ Notify error: {e}")
 
     await m.answer("✅ Заявка прийнята!", reply_markup=types.ReplyKeyboardRemove())
+    push_to_desktop(uid, m.from_user.full_name, "Нова заявка створена", message_id=m.message_id)
     user_data.pop(uid, None)
 
 def schedule_jobs():
