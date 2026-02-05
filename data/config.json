@@ -1,0 +1,9 @@
+{
+  "telegram_bot_token": "",
+  "shared_secret": "",
+  "local_api_port": 8765,
+  "google_creds_path": "",
+  "service_calendar_mapping": [
+    {"service_type": "", "calendar_id": ""}
+  ]
+}
