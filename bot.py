@@ -12,6 +12,7 @@ from aiogram.types import BotCommand
 import asyncio
 from reminder import run_daily_check
 from config import SERVICE_TYPES, POPULAR_CARS
+from desktop_push import push_summary
 
 async def setup_bot_commands():
     commands = [
@@ -236,6 +237,17 @@ async def step_contact(m: types.Message):
         notify_manager(data, m.from_user.full_name, chat_id)
     except Exception as e:
         logging.error(f"❌ Notify error: {e}")
+
+    try:
+        summary = (
+            f"Нова заявка від {m.from_user.full_name}: "
+            f"{data.get('service_type')} - {data.get('subtype')}, "
+            f"{data.get('car')}, {data.get('datetime')}, "
+            f"тел: {data.get('phone')}"
+        )
+        push_summary(str(uid), m.from_user.full_name, summary, str(m.message_id))
+    except Exception as e:
+        logging.error(f"❌ Desktop push error: {e}")
 
     await m.answer("✅ Заявка прийнята!", reply_markup=types.ReplyKeyboardRemove())
     user_data.pop(uid, None)
